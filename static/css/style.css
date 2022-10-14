@@ -1,0 +1,242 @@
+/* General Styling */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: white;
+}
+:root{
+    --para:'Abyssinica SIL', serif;
+    --head:'Merriweather', serif;
+    --font:'Roboto', sans-serif;
+    --red: #b00505;
+    --yellow:#edc834;
+    --black:#1a1918;
+    --white:#f2f2f0;
+}
+.hdings{
+    font-family: var(--head);
+    text-align: center;
+}
+nav{
+    width: 70%;
+    height: 10vh;
+    background-color:var(--white);
+    margin: auto;
+}
+.px{
+    padding: 0px 100px;
+}
+.df{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+nav{
+    position: sticky;
+    width: auto;
+    z-index: 100;
+    top: 0;
+    background-color: var(--white);
+    height: 80px;
+}
+nav a{
+    font-weight: 700;
+    font-family: var(--font);
+    text-transform: capitalize;
+}
+nav a:hover{
+    color: red;
+}
+nav li{
+    margin: 0px 20px;
+}
+#brand img{
+    width: 133px;
+    height: 55px;
+    display: block;
+}
+
+.home{
+    color: var(--red);
+}
+.font{
+    font-family: var(--font);
+}
+
+.black{
+    color: var(--black);
+}
+.btn{
+    color: var(--red);
+    background-color: var(--white);
+    border: 2px solid  var(--red);
+padding: 8px 20px;
+border-radius: 10px 10px;
+}
+.btn:hover{
+    color: white;
+    background-color: rgb(103, 7, 7);
+}
+/* Navbar media Quert */
+@media only screen and (max-width:915px) {
+    #lgnav{
+        display: none;
+    }
+    body{
+        background-color: white !important;
+    }
+    #toggle{
+        display: inline-block !important;
+    }
+    #heropage{
+    width: auto;
+    height: 90vh;
+    background-image: url(../image/hero01.png);
+}
+.btn{
+    padding: 5px 5px;
+}
+}
+#toggle{
+    display: none;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-content{
+    position: absolute;
+    min-width: fit-content;
+    width: 150px;
+    display: none;
+    z-index: 100;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+    background-color: white;
+    margin-right: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9),
+     0 6px 20px 0 rgba(0, 0, 0, 0.9);
+}
+.dropdown-content a{
+    display: block !important;
+    margin: 10px;
+    font-weight: 700 !important;
+    font-family: var(--font) !important;
+    text-transform: capitalize !important;
+    font-size: 1.5em;
+    text-align: left;
+}
+.home, .black{
+    border-bottom: grey;
+}
+/* Hero page styling */
+#heropage{
+    width: auto;
+    height: 90vh;
+    background-image: url(../image/banner1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation-name: herobg;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+@keyframes herobg {
+    0%{
+        background-image: url("../image/banner1.jpg");
+    }
+    50%{
+        background-image: url(../image/banner3.c91ca9d522a834419cf2.jpg);
+    }
+    100%{
+        background-image: url("../image/banner1.jpg");
+    }
+}
+#heropage h1{
+    color: white;
+}
+.overlay{
+    width: auto;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.7)
+}
+.space{
+    width: auto;
+    height: 150px;
+}
+/* Why Box styling starts */
+#why{
+    width: auto;
+    height: fit-content;
+}
+section{
+    width: 95%;
+    height: fit-content;
+}
+.why-box{
+    width: 31%;
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+.why-box i{
+    color: yellow;
+    font-size: 2.5em;
+    margin: 10px 0 20px;
+}
+.why-box h2{
+    margin-bottom: 20px;
+} 
+.why-box p{
+    font-family: var(--font);
+    font-size: 0.98em;
+}
+.btn-box{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: fit-content;
+}
+
+@media screen and (max-width:991px) {
+    section{
+        flex-wrap: wrap;
+    }
+    .why-box{
+        width:35%;
+        margin: 30px auto;
+        height: fit-content;
+    }
+}
+@media screen and (max-width:767px) {
+    section{
+        flex-wrap: wrap;
+    }
+    .why-box{
+        width:80%;
+        margin: 30px auto;
+    }
+}
+/* Why Box Styling Ends */
+
+/* Enroll Box Styling Starts */
+#enroll{
+    width: auto;
+    height: fit-content;  
+    background-color:#111829;
+}
+.enroll-box{
+width: 49%;
+background-color: #1a1918;
+height: 600px;
+}
+/* Enroll Box Styling Ends */
